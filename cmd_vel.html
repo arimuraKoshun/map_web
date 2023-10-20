@@ -9,6 +9,7 @@
 
 <body>
   <p><img id="camera_image" src="" alt="non image"/></p>
+
   <hr/>
 
   <p>Connection: <span id="status" style="font-weight: bold;">N/A</span></p>
@@ -17,7 +18,7 @@
   <p>Subscribing to topic: <code>/gps/fix</code></p>
   <p><code>/gps/fix</code> messages received: <span id="messages" style="font-weight: bold;"></span></p>
   <div id="gps_data_display"></div>
-
+  <button id="call_service_button">Call ROS Service</button>
   <!--
   <div id="pad" style="width: 300px; height: 300px; background-color: #4e4949;">
   <div id="handle" style="width: 50px; height: 50px; background-color: #201c1c; position: relative; left: 125px; top: 125px; border-radius: 50%;"></div>
@@ -119,24 +120,6 @@
 
          // Calling a service
         // -----------------
-      
-        var addTwoIntsClient = new ROSLIB.Service({
-          ros : ros,
-          name : '/add_two_ints',
-          serviceType : 'rospy_tutorials/AddTwoInts'
-        });
-      
-        var request = new ROSLIB.ServiceRequest({
-          a : 1,
-          b : 2
-        });
-      
-        addTwoIntsClient.callService(request, function(result) {
-          console.log('Result for service call on '
-            + addTwoIntsClient.name
-            + ': '
-            + result.sum);
-        });
 
         var gps = new ROSLIB.Topic({
           ros : ros,
@@ -145,6 +128,8 @@
         });
 
         gps.subscribe(function(message){
+          lat = message.latitude;
+          long = message.longitude
           console.log('Received GPS Fix Data:');
           console.log('Latitude: ' + message.latitude);
           console.log('Longitude: ' + message.longitude);
@@ -156,6 +141,29 @@
         displayDiv.innerHTML = 'Latitude: ' + message.latitude + '<br>' +
                         'Longitude: ' + message.longitude + '<br>' +
                         'Altitude: ' + message.altitude;
+        });
+
+
+        var callServiceButton = document.getElementById('call_service_button');
+        callServiceButton.addEventListener('click', function() {
+      
+          var addTwoIntsClient = new ROSLIB.Service({
+            ros : ros,
+            name : '/receive_point',
+            serviceType : 'map_service/Mappoint'
+          });
+        
+          var request = new ROSLIB.ServiceRequest({
+            lat : lat,
+            lon : long
+          });
+        
+          addTwoIntsClient.callService(request, function(result) {
+            console.log('Result for service call on '
+              + addTwoIntsClient.name
+              + ': '
+              + result.message);
+          });
         });
 
 
