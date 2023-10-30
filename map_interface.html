@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="utf-8">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/roslibjs/0.20.0/roslib.min.js"></script>
+    <title>Google Maps interface</title>
+    <style>
+        #right-sidebar {
+            position: fixed;
+            top: 0;
+            right: 0;
+            width: 300px; /* 右側表示エリアの幅を設定 */
+            height: 100%;
+            background-color: #f0f0f0;
+            border-left: 1px solid #ccc;
+            padding: 10px;
+            overflow-y: auto; /* コンテンツがはみ出た場合にスクロールバーを表示 */
+        }
+    </style>
+  </head>
+  <body>
+    <p>九州工業大学グランド</p>
+    <div id="right-sidebar">
+        <!-- 右側表示エリア -->
+    </div>
+    <div id="map" style="width:620px; height:400px"></div>
+
+    <p>Connection: <span id="status" style="font-weight: bold;">N/A</span></p>
+
+    <h1>ROS Websocket</h1>
+    <p>Subscribing to topic: <code>/gps/fix</code></p>
+    <p><code>/gps/fix</code> messages received: <span id="messages" style="font-weight: bold;"></span></p>
+    <div id="gps_data_display"></div>
+    <button id="call_service_button">Call ROS Service</button>
+
+    <script type="text/javascript" src="js/sample.js"></script>
+    <script type="text/javascript" src="js/sample2.js"></script>
+
+    <script async defer
+      src="https://maps.googleapis.com/maps/api/js?language=en&key=AIzaSyBou_onn86hIAu0NZNeAqow_59t2CXUfqk&callback=initMap">
+    </script>
+  </body>
+</html>
