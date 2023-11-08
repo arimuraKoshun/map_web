@@ -1,0 +1,4 @@
+Invoking command in '/home/hayashi/map_ros/build/map_service': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/hayashi/map_ros/install/map_point:/opt/ros/foxy /usr/bin/cmake --build /home/hayashi/map_ros/build/map_service -- -j12 -l12
+Invoked command in '/home/hayashi/map_ros/build/map_service' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/hayashi/map_ros/install/map_point:/opt/ros/foxy /usr/bin/cmake --build /home/hayashi/map_ros/build/map_service -- -j12 -l12
+Invoking command in '/home/hayashi/map_ros/build/map_service': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/hayashi/map_ros/install/map_point:/opt/ros/foxy /usr/bin/cmake --install /home/hayashi/map_ros/build/map_service
+Invoked command in '/home/hayashi/map_ros/build/map_service' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/hayashi/map_ros/install/map_point:/opt/ros/foxy /usr/bin/cmake --install /home/hayashi/map_ros/build/map_service

@@ -1,0 +1,332 @@
+[0.000000] (-) TimerEvent: {}
+[0.000594] (map_service) JobQueued: {'identifier': 'map_service', 'dependencies': OrderedDict()}
+[0.000660] (map_point) JobQueued: {'identifier': 'map_point', 'dependencies': OrderedDict([('map_service', '/home/hayashi/map_ros/install/map_service')])}
+[0.000682] (map_service) JobStarted: {'identifier': 'map_service'}
+[0.100441] (-) TimerEvent: {}
+[0.125755] (map_service) JobProgress: {'identifier': 'map_service', 'progress': 'cmake'}
+[0.126489] (map_service) Command: {'cmd': ['/usr/bin/cmake', '/home/hayashi/map_ros/src/map_service', '-DCMAKE_INSTALL_PREFIX=/home/hayashi/map_ros/install/map_service'], 'cwd': '/home/hayashi/map_ros/build/map_service', 'env': OrderedDict([('GJS_DEBUG_TOPICS', 'JS ERROR;JS LOG'), ('LESSOPEN', '| /usr/bin/lesspipe %s'), ('USER', 'hayashi'), ('SSH_AGENT_PID', '2064'), ('XDG_SESSION_TYPE', 'x11'), ('SHLVL', '1'), ('LD_LIBRARY_PATH', '/usr/lib/x86_64-linux-gnu/gazebo-11/plugins:/opt/ros/foxy/opt/yaml_cpp_vendor/lib:/opt/ros/foxy/opt/rviz_ogre_vendor/lib:/opt/ros/foxy/lib/x86_64-linux-gnu:/opt/ros/foxy/lib'), ('HOME', '/home/hayashi'), ('OLDPWD', '/home/hayashi/map_ros/src'), ('DESKTOP_SESSION', 'ubuntu'), ('GIO_LAUNCHED_DESKTOP_FILE', '/usr/share/applications/terminator.desktop'), ('ROS_PYTHON_VERSION', '3'), ('GNOME_SHELL_SESSION_MODE', 'ubuntu'), ('GTK_MODULES', 'gail:atk-bridge'), ('MANAGERPID', '1889'), ('DBUS_SESSION_BUS_ADDRESS', 'unix:path=/run/user/1000/bus'), ('COLORTERM', 'truecolor'), ('TERMINATOR_DBUS_NAME', 'net.tenshu.Terminator21a9d5db22c73a993ff0b42f64b396873'), ('GIO_LAUNCHED_DESKTOP_FILE_PID', '5363'), ('_colcon_cd_root', '/home/hayashi/ros2_ws'), ('MANDATORY_PATH', '/usr/share/gconf/ubuntu.mandatory.path'), ('IM_CONFIG_PHASE', '1'), ('ROS_DISTRO', 'foxy'), ('LOGNAME', 'hayashi'), ('JOURNAL_STREAM', '8:50288'), ('_', '/usr/bin/colcon'), ('ROS_VERSION', '2'), ('XDG_SESSION_CLASS', 'user'), ('DEFAULTS_PATH', '/usr/share/gconf/ubuntu.default.path'), ('USERNAME', 'hayashi'), ('TERM', 'xterm-256color'), ('GAZEBO_MODEL_PATH', ':/home/hayashi/ros2_ws/src/basic_mobile_robot/models/'), ('GNOME_DESKTOP_SESSION_ID', 'this-is-deprecated'), ('ROS_LOCALHOST_ONLY', '0'), ('WINDOWPATH', '2'), ('PATH', '/opt/ros/foxy/bin:/home/hayashi/.local/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin'), ('SESSION_MANAGER', 'local/hayashi-Inspiron-3881:@/tmp/.ICE-unix/2102,unix/hayashi-Inspiron-3881:/tmp/.ICE-unix/2102'), ('INVOCATION_ID', '64861e9fe2a040c49069df33351ba8b7'), ('XDG_MENU_PREFIX', 'gnome-'), ('XDG_RUNTIME_DIR', '/run/user/1000'), ('DISPLAY', ':0'), ('TERMINATOR_DBUS_PATH', '/net/tenshu/Terminator2'), ('LANG', 'ja_JP.UTF-8'), ('XDG_CURRENT_DESKTOP', 'ubuntu:GNOME'), ('XMODIFIERS', '@im=ibus'), ('XDG_SESSION_DESKTOP', 'ubuntu'), ('XAUTHORITY', '/run/user/1000/gdm/Xauthority'), ('LS_COLORS', 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:'), ('SSH_AUTH_SOCK', '/run/user/1000/keyring/ssh'), ('ROS_DOMAIN_ID', '30'), ('AMENT_PREFIX_PATH', '/opt/ros/foxy'), ('SHELL', '/bin/bash'), ('TERMINATOR_UUID', 'urn:uuid:1ad81d7e-5cd7-4f58-8dac-c9734126d851'), ('QT_ACCESSIBILITY', '1'), ('GDMSESSION', 'ubuntu'), ('LESSCLOSE', '/usr/bin/lesspipe %s %s'), ('GPG_AGENT_INFO', '/run/user/1000/gnupg/S.gpg-agent:0:1'), ('GJS_DEBUG_OUTPUT', 'stderr'), ('QT_IM_MODULE', 'ibus'), ('PWD', '/home/hayashi/map_ros/build/map_service'), ('OPENCR_PORT', '/dev/ttyACM0'), ('TURTLEBOT3_MODEL', 'waffle'), ('XDG_CONFIG_DIRS', '/etc/xdg/xdg-ubuntu:/etc/xdg'), ('XDG_DATA_DIRS', '/usr/share/ubuntu:/usr/local/share/:/usr/share/:/var/lib/snapd/desktop'), ('LDS_MODEL', 'LDS-02'), ('PYTHONPATH', '/opt/ros/foxy/lib/python3.8/site-packages'), ('COLCON', '1'), ('VTE_VERSION', '6003'), ('OPENCR_MODEL', 'waffle'), ('CMAKE_PREFIX_PATH', '/opt/ros/foxy')]), 'shell': False}
+[0.200638] (-) TimerEvent: {}
+[0.301138] (-) TimerEvent: {}
+[0.373542] (map_service) StdoutLine: {'line': b'-- The C compiler identification is GNU 9.4.0\n'}
+[0.401227] (-) TimerEvent: {}
+[0.500383] (map_service) StdoutLine: {'line': b'-- The CXX compiler identification is GNU 9.4.0\n'}
+[0.501336] (-) TimerEvent: {}
+[0.510537] (map_service) StdoutLine: {'line': b'-- Check for working C compiler: /usr/bin/cc\n'}
+[0.570297] (map_service) StdoutLine: {'line': b'-- Check for working C compiler: /usr/bin/cc -- works\n'}
+[0.572057] (map_service) StdoutLine: {'line': b'-- Detecting C compiler ABI info\n'}
+[0.601486] (-) TimerEvent: {}
+[0.626685] (map_service) StdoutLine: {'line': b'-- Detecting C compiler ABI info - done\n'}
+[0.637878] (map_service) StdoutLine: {'line': b'-- Detecting C compile features\n'}
+[0.638416] (map_service) StdoutLine: {'line': b'-- Detecting C compile features - done\n'}
+[0.641418] (map_service) StdoutLine: {'line': b'-- Check for working CXX compiler: /usr/bin/c++\n'}
+[0.701616] (-) TimerEvent: {}
+[0.703929] (map_service) StdoutLine: {'line': b'-- Check for working CXX compiler: /usr/bin/c++ -- works\n'}
+[0.704895] (map_service) StdoutLine: {'line': b'-- Detecting CXX compiler ABI info\n'}
+[0.767954] (map_service) StdoutLine: {'line': b'-- Detecting CXX compiler ABI info - done\n'}
+[0.778836] (map_service) StdoutLine: {'line': b'-- Detecting CXX compile features\n'}
+[0.779345] (map_service) StdoutLine: {'line': b'-- Detecting CXX compile features - done\n'}
+[0.788055] (map_service) StdoutLine: {'line': b'-- Found ament_cmake: 0.9.12 (/opt/ros/foxy/share/ament_cmake/cmake)\n'}
+[0.801707] (-) TimerEvent: {}
+[0.810177] (map_service) StdoutLine: {'line': b'-- Found PythonInterp: /usr/bin/python3 (found suitable version "3.8.10", minimum required is "3") \n'}
+[0.810372] (map_service) StdoutLine: {'line': b'-- Using PYTHON_EXECUTABLE: /usr/bin/python3\n'}
+[0.901827] (-) TimerEvent: {}
+[0.996549] (map_service) StdoutLine: {'line': b'-- Found geometry_msgs: 2.0.5 (/opt/ros/foxy/share/geometry_msgs/cmake)\n'}
+[1.001920] (-) TimerEvent: {}
+[1.033014] (map_service) StdoutLine: {'line': b'-- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c\n'}
+[1.041903] (map_service) StdoutLine: {'line': b'-- Found rosidl_adapter: 1.3.1 (/opt/ros/foxy/share/rosidl_adapter/cmake)\n'}
+[1.102110] (-) TimerEvent: {}
+[1.202642] (-) TimerEvent: {}
+[1.211504] (map_service) StdoutLine: {'line': b'-- Found OpenSSL: /usr/lib/x86_64-linux-gnu/libcrypto.so (found version "1.1.1f")  \n'}
+[1.255125] (map_service) StdoutLine: {'line': b'-- Found FastRTPS: /opt/ros/foxy/include  \n'}
+[1.302758] (-) TimerEvent: {}
+[1.327990] (map_service) StdoutLine: {'line': b'-- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp\n'}
+[1.402863] (-) TimerEvent: {}
+[1.412456] (map_service) StdoutLine: {'line': b'-- Found rosidl_default_generators: 1.0.1 (/opt/ros/foxy/share/rosidl_default_generators/cmake)\n'}
+[1.439038] (map_service) StdoutLine: {'line': b'-- Found PythonInterp: /usr/bin/python3 (found version "3.8.10") \n'}
+[1.502985] (-) TimerEvent: {}
+[1.573840] (map_service) StdoutLine: {'line': b'-- Found ament_cmake_ros: 0.9.2 (/opt/ros/foxy/share/ament_cmake_ros/cmake)\n'}
+[1.603124] (-) TimerEvent: {}
+[1.703406] (-) TimerEvent: {}
+[1.793193] (map_service) StdoutLine: {'line': b'-- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c\n'}
+[1.803498] (-) TimerEvent: {}
+[1.882227] (map_service) StdoutLine: {'line': b'-- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp\n'}
+[1.900947] (map_service) StdoutLine: {'line': b'-- Found PythonInterp: /usr/bin/python3 (found suitable version "3.8.10", minimum required is "3.5") \n'}
+[1.902783] (map_service) StdoutLine: {'line': b'-- Found python_cmake_module: 0.8.1 (/opt/ros/foxy/share/python_cmake_module/cmake)\n'}
+[1.903559] (-) TimerEvent: {}
+[1.924662] (map_service) StdoutLine: {'line': b'-- Found PythonLibs: /usr/lib/x86_64-linux-gnu/libpython3.8.so (found suitable version "3.8.10", minimum required is "3.5") \n'}
+[1.924948] (map_service) StdoutLine: {'line': b'-- Using PYTHON_EXECUTABLE: /usr/bin/python3\n'}
+[1.925040] (map_service) StdoutLine: {'line': b'-- Using PYTHON_INCLUDE_DIRS: /usr/include/python3.8\n'}
+[1.925111] (map_service) StdoutLine: {'line': b'-- Using PYTHON_LIBRARIES: /usr/lib/x86_64-linux-gnu/libpython3.8.so\n'}
+[1.940695] (map_service) StdoutLine: {'line': b'-- Found PythonExtra: .so  \n'}
+[2.003689] (-) TimerEvent: {}
+[2.004418] (map_service) StdoutLine: {'line': b'-- Found ament_lint_auto: 0.9.8 (/opt/ros/foxy/share/ament_lint_auto/cmake)\n'}
+[2.035162] (map_service) StdoutLine: {'line': b"-- Added test 'copyright' to check source files copyright and LICENSE\n"}
+[2.037263] (map_service) StdoutLine: {'line': b"-- Added test 'lint_cmake' to check CMake code style\n"}
+[2.038565] (map_service) StdoutLine: {'line': b"-- Added test 'xmllint' to check XML markup files\n"}
+[2.042560] (map_service) StdoutLine: {'line': b'-- Configuring done\n'}
+[2.091786] (map_service) StdoutLine: {'line': b'-- Generating done\n'}
+[2.093638] (map_service) StdoutLine: {'line': b'-- Build files have been written to: /home/hayashi/map_ros/build/map_service\n'}
+[2.099333] (map_service) CommandEnded: {'returncode': 0}
+[2.101634] (map_service) JobProgress: {'identifier': 'map_service', 'progress': 'build'}
+[2.101714] (map_service) Command: {'cmd': ['/usr/bin/cmake', '--build', '/home/hayashi/map_ros/build/map_service', '--', '-j12', '-l12'], 'cwd': '/home/hayashi/map_ros/build/map_service', 'env': OrderedDict([('GJS_DEBUG_TOPICS', 'JS ERROR;JS LOG'), ('LESSOPEN', '| /usr/bin/lesspipe %s'), ('USER', 'hayashi'), ('SSH_AGENT_PID', '2064'), ('XDG_SESSION_TYPE', 'x11'), ('SHLVL', '1'), ('LD_LIBRARY_PATH', '/usr/lib/x86_64-linux-gnu/gazebo-11/plugins:/opt/ros/foxy/opt/yaml_cpp_vendor/lib:/opt/ros/foxy/opt/rviz_ogre_vendor/lib:/opt/ros/foxy/lib/x86_64-linux-gnu:/opt/ros/foxy/lib'), ('HOME', '/home/hayashi'), ('OLDPWD', '/home/hayashi/map_ros/src'), ('DESKTOP_SESSION', 'ubuntu'), ('GIO_LAUNCHED_DESKTOP_FILE', '/usr/share/applications/terminator.desktop'), ('ROS_PYTHON_VERSION', '3'), ('GNOME_SHELL_SESSION_MODE', 'ubuntu'), ('GTK_MODULES', 'gail:atk-bridge'), ('MANAGERPID', '1889'), ('DBUS_SESSION_BUS_ADDRESS', 'unix:path=/run/user/1000/bus'), ('COLORTERM', 'truecolor'), ('TERMINATOR_DBUS_NAME', 'net.tenshu.Terminator21a9d5db22c73a993ff0b42f64b396873'), ('GIO_LAUNCHED_DESKTOP_FILE_PID', '5363'), ('_colcon_cd_root', '/home/hayashi/ros2_ws'), ('MANDATORY_PATH', '/usr/share/gconf/ubuntu.mandatory.path'), ('IM_CONFIG_PHASE', '1'), ('ROS_DISTRO', 'foxy'), ('LOGNAME', 'hayashi'), ('JOURNAL_STREAM', '8:50288'), ('_', '/usr/bin/colcon'), ('ROS_VERSION', '2'), ('XDG_SESSION_CLASS', 'user'), ('DEFAULTS_PATH', '/usr/share/gconf/ubuntu.default.path'), ('USERNAME', 'hayashi'), ('TERM', 'xterm-256color'), ('GAZEBO_MODEL_PATH', ':/home/hayashi/ros2_ws/src/basic_mobile_robot/models/'), ('GNOME_DESKTOP_SESSION_ID', 'this-is-deprecated'), ('ROS_LOCALHOST_ONLY', '0'), ('WINDOWPATH', '2'), ('PATH', '/opt/ros/foxy/bin:/home/hayashi/.local/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin'), ('SESSION_MANAGER', 'local/hayashi-Inspiron-3881:@/tmp/.ICE-unix/2102,unix/hayashi-Inspiron-3881:/tmp/.ICE-unix/2102'), ('INVOCATION_ID', '64861e9fe2a040c49069df33351ba8b7'), ('XDG_MENU_PREFIX', 'gnome-'), ('XDG_RUNTIME_DIR', '/run/user/1000'), ('DISPLAY', ':0'), ('TERMINATOR_DBUS_PATH', '/net/tenshu/Terminator2'), ('LANG', 'ja_JP.UTF-8'), ('XDG_CURRENT_DESKTOP', 'ubuntu:GNOME'), ('XMODIFIERS', '@im=ibus'), ('XDG_SESSION_DESKTOP', 'ubuntu'), ('XAUTHORITY', '/run/user/1000/gdm/Xauthority'), ('LS_COLORS', 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:'), ('SSH_AUTH_SOCK', '/run/user/1000/keyring/ssh'), ('ROS_DOMAIN_ID', '30'), ('AMENT_PREFIX_PATH', '/opt/ros/foxy'), ('SHELL', '/bin/bash'), ('TERMINATOR_UUID', 'urn:uuid:1ad81d7e-5cd7-4f58-8dac-c9734126d851'), ('QT_ACCESSIBILITY', '1'), ('GDMSESSION', 'ubuntu'), ('LESSCLOSE', '/usr/bin/lesspipe %s %s'), ('GPG_AGENT_INFO', '/run/user/1000/gnupg/S.gpg-agent:0:1'), ('GJS_DEBUG_OUTPUT', 'stderr'), ('QT_IM_MODULE', 'ibus'), ('PWD', '/home/hayashi/map_ros/build/map_service'), ('OPENCR_PORT', '/dev/ttyACM0'), ('TURTLEBOT3_MODEL', 'waffle'), ('XDG_CONFIG_DIRS', '/etc/xdg/xdg-ubuntu:/etc/xdg'), ('XDG_DATA_DIRS', '/usr/share/ubuntu:/usr/local/share/:/usr/share/:/var/lib/snapd/desktop'), ('LDS_MODEL', 'LDS-02'), ('PYTHONPATH', '/opt/ros/foxy/lib/python3.8/site-packages'), ('COLCON', '1'), ('VTE_VERSION', '6003'), ('OPENCR_MODEL', 'waffle'), ('CMAKE_PREFIX_PATH', '/opt/ros/foxy')]), 'shell': False}
+[2.103746] (-) TimerEvent: {}
+[2.128976] (map_service) StdoutLine: {'line': b'\x1b[35m\x1b[1mScanning dependencies of target map_service__cpp\x1b[0m\n'}
+[2.129216] (map_service) StdoutLine: {'line': b'[  3%] \x1b[34m\x1b[1mGenerating C code for ROS interfaces\x1b[0m\n'}
+[2.137010] (map_service) StdoutLine: {'line': b'[  6%] \x1b[34m\x1b[1mGenerating C++ code for ROS interfaces\x1b[0m\n'}
+[2.203851] (-) TimerEvent: {}
+[2.304086] (-) TimerEvent: {}
+[2.330880] (map_service) StdoutLine: {'line': b'[  6%] Built target map_service__cpp\n'}
+[2.337800] (map_service) StdoutLine: {'line': b'\x1b[35m\x1b[1mScanning dependencies of target map_service__rosidl_generator_c\x1b[0m\n'}
+[2.338504] (map_service) StdoutLine: {'line': b'[ 16%] \x1b[34m\x1b[1mGenerating C++ type support for eProsima Fast-RTPS\x1b[0m\n'}
+[2.338636] (map_service) StdoutLine: {'line': b'[ 16%] \x1b[34m\x1b[1mGenerating C++ type support dispatch for ROS interfaces\x1b[0m\n'}
+[2.338743] (map_service) StdoutLine: {'line': b'[ 16%] \x1b[34m\x1b[1mGenerating C++ introspection for ROS interfaces\x1b[0m\n'}
+[2.350826] (map_service) StdoutLine: {'line': b'[ 19%] \x1b[32mBuilding C object CMakeFiles/map_service__rosidl_generator_c.dir/rosidl_generator_c/map_service/srv/detail/point_request__functions.c.o\x1b[0m\n'}
+[2.404199] (-) TimerEvent: {}
+[2.415399] (map_service) StdoutLine: {'line': b'[ 22%] \x1b[32m\x1b[1mLinking C shared library libmap_service__rosidl_generator_c.so\x1b[0m\n'}
+[2.453750] (map_service) StdoutLine: {'line': b'[ 22%] Built target map_service__rosidl_generator_c\n'}
+[2.461473] (map_service) StdoutLine: {'line': b'[ 29%] \x1b[34m\x1b[1mGenerating C introspection for ROS interfaces\x1b[0m\n'}
+[2.461615] (map_service) StdoutLine: {'line': b'[ 29%] \x1b[34m\x1b[1mGenerating C type support dispatch for ROS interfaces\x1b[0m\n'}
+[2.504293] (-) TimerEvent: {}
+[2.505484] (map_service) StdoutLine: {'line': b'\x1b[35m\x1b[1mScanning dependencies of target map_service__rosidl_typesupport_cpp\x1b[0m\n'}
+[2.521970] (map_service) StdoutLine: {'line': b'[ 32%] \x1b[32mBuilding CXX object CMakeFiles/map_service__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/map_service/srv/point_request__type_support.cpp.o\x1b[0m\n'}
+[2.523752] (map_service) StdoutLine: {'line': b'\x1b[35m\x1b[1mScanning dependencies of target map_service__rosidl_typesupport_introspection_cpp\x1b[0m\n'}
+[2.534631] (map_service) StdoutLine: {'line': b'\x1b[35m\x1b[1mScanning dependencies of target map_service__rosidl_typesupport_fastrtps_cpp\x1b[0m\n'}
+[2.536093] (map_service) StdoutLine: {'line': b'[ 35%] \x1b[32mBuilding CXX object CMakeFiles/map_service__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/map_service/srv/detail/point_request__type_support.cpp.o\x1b[0m\n'}
+[2.557492] (map_service) StdoutLine: {'line': b'[ 38%] \x1b[32mBuilding CXX object CMakeFiles/map_service__rosidl_typesupport_fastrtps_cpp.dir/rosidl_typesupport_fastrtps_cpp/map_service/srv/detail/dds_fastrtps/point_request__type_support.cpp.o\x1b[0m\n'}
+[2.604403] (-) TimerEvent: {}
+[2.631894] (map_service) StdoutLine: {'line': b'\x1b[35m\x1b[1mScanning dependencies of target map_service__rosidl_typesupport_c\x1b[0m\n'}
+[2.642094] (map_service) StdoutLine: {'line': b'[ 41%] \x1b[32mBuilding CXX object CMakeFiles/map_service__rosidl_typesupport_c.dir/rosidl_typesupport_c/map_service/srv/point_request__type_support.cpp.o\x1b[0m\n'}
+[2.653407] (map_service) StdoutLine: {'line': b'\x1b[35m\x1b[1mScanning dependencies of target map_service__rosidl_typesupport_introspection_c\x1b[0m\n'}
+[2.663610] (map_service) StdoutLine: {'line': b'[ 45%] \x1b[32mBuilding C object CMakeFiles/map_service__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/map_service/srv/detail/point_request__type_support.c.o\x1b[0m\n'}
+[2.667495] (map_service) StdoutLine: {'line': b'[ 48%] \x1b[32m\x1b[1mLinking CXX shared library libmap_service__rosidl_typesupport_c.so\x1b[0m\n'}
+[2.690583] (map_service) StdoutLine: {'line': b'[ 51%] \x1b[32m\x1b[1mLinking C shared library libmap_service__rosidl_typesupport_introspection_c.so\x1b[0m\n'}
+[2.698865] (map_service) StdoutLine: {'line': b'[ 51%] Built target map_service__rosidl_typesupport_c\n'}
+[2.704531] (-) TimerEvent: {}
+[2.713925] (map_service) StdoutLine: {'line': b'[ 51%] Built target map_service__rosidl_typesupport_introspection_c\n'}
+[2.804665] (-) TimerEvent: {}
+[2.810625] (map_service) StdoutLine: {'line': b'[ 54%] \x1b[32m\x1b[1mLinking CXX shared library libmap_service__rosidl_typesupport_cpp.so\x1b[0m\n'}
+[2.841619] (map_service) StdoutLine: {'line': b'[ 54%] Built target map_service__rosidl_typesupport_cpp\n'}
+[2.856798] (map_service) StdoutLine: {'line': b'[ 58%] \x1b[32m\x1b[1mLinking CXX shared library libmap_service__rosidl_typesupport_introspection_cpp.so\x1b[0m\n'}
+[2.904763] (-) TimerEvent: {}
+[2.907992] (map_service) StdoutLine: {'line': b'[ 58%] Built target map_service__rosidl_typesupport_introspection_cpp\n'}
+[2.929280] (map_service) StdoutLine: {'line': b'[ 61%] \x1b[32m\x1b[1mLinking CXX shared library libmap_service__rosidl_typesupport_fastrtps_cpp.so\x1b[0m\n'}
+[3.004882] (-) TimerEvent: {}
+[3.017083] (map_service) StdoutLine: {'line': b'[ 61%] Built target map_service__rosidl_typesupport_fastrtps_cpp\n'}
+[3.024225] (map_service) StdoutLine: {'line': b'[ 64%] \x1b[34m\x1b[1mGenerating C type support for eProsima Fast-RTPS\x1b[0m\n'}
+[3.104988] (-) TimerEvent: {}
+[3.205232] (-) TimerEvent: {}
+[3.207691] (map_service) StdoutLine: {'line': b'\x1b[35m\x1b[1mScanning dependencies of target map_service__rosidl_typesupport_fastrtps_c\x1b[0m\n'}
+[3.220740] (map_service) StdoutLine: {'line': b'[ 67%] \x1b[32mBuilding CXX object CMakeFiles/map_service__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/map_service/srv/detail/point_request__type_support_c.cpp.o\x1b[0m\n'}
+[3.305350] (-) TimerEvent: {}
+[3.405621] (-) TimerEvent: {}
+[3.489291] (map_service) StdoutLine: {'line': b'[ 70%] \x1b[32m\x1b[1mLinking CXX shared library libmap_service__rosidl_typesupport_fastrtps_c.so\x1b[0m\n'}
+[3.505739] (-) TimerEvent: {}
+[3.549331] (map_service) StdoutLine: {'line': b'[ 70%] Built target map_service__rosidl_typesupport_fastrtps_c\n'}
+[3.556023] (map_service) StdoutLine: {'line': b'\x1b[35m\x1b[1mScanning dependencies of target map_service\x1b[0m\n'}
+[3.562867] (map_service) StdoutLine: {'line': b'[ 70%] Built target map_service\n'}
+[3.569427] (map_service) StdoutLine: {'line': b'\x1b[35m\x1b[1mScanning dependencies of target map_service__py\x1b[0m\n'}
+[3.576597] (map_service) StdoutLine: {'line': b'[ 74%] \x1b[34m\x1b[1mGenerating Python code for ROS interfaces\x1b[0m\n'}
+[3.605839] (-) TimerEvent: {}
+[3.706071] (-) TimerEvent: {}
+[3.806363] (-) TimerEvent: {}
+[3.906617] (-) TimerEvent: {}
+[4.006866] (-) TimerEvent: {}
+[4.016417] (map_service) StdoutLine: {'line': b'[ 74%] Built target map_service__py\n'}
+[4.022996] (map_service) StdoutLine: {'line': b'\x1b[35m\x1b[1mScanning dependencies of target map_service__python\x1b[0m\n'}
+[4.089881] (map_service) StdoutLine: {'line': b'[ 77%] \x1b[32mBuilding C object CMakeFiles/map_service__python.dir/rosidl_generator_py/map_service/srv/_point_request_s.c.o\x1b[0m\n'}
+[4.106962] (-) TimerEvent: {}
+[4.180700] (map_service) StdoutLine: {'line': b'[ 80%] \x1b[32m\x1b[1mLinking C shared library rosidl_generator_py/map_service/libmap_service__python.so\x1b[0m\n'}
+[4.207055] (-) TimerEvent: {}
+[4.212535] (map_service) StdoutLine: {'line': b'[ 80%] Built target map_service__python\n'}
+[4.219733] (map_service) StdoutLine: {'line': b'\x1b[35m\x1b[1mScanning dependencies of target map_service__rosidl_typesupport_introspection_c__pyext\x1b[0m\n'}
+[4.219907] (map_service) StdoutLine: {'line': b'\x1b[35m\x1b[1mScanning dependencies of target map_service__rosidl_typesupport_c__pyext\x1b[0m\n'}
+[4.220006] (map_service) StdoutLine: {'line': b'\x1b[35m\x1b[1mScanning dependencies of target map_service__rosidl_typesupport_fastrtps_c__pyext\x1b[0m\n'}
+[4.232055] (map_service) StdoutLine: {'line': b'[ 87%] \x1b[32mBuilding C object CMakeFiles/map_service__rosidl_typesupport_introspection_c__pyext.dir/rosidl_generator_py/map_service/_map_service_s.ep.rosidl_typesupport_introspection_c.c.o\x1b[0m\n'}
+[4.232209] (map_service) StdoutLine: {'line': b'[ 87%] \x1b[32mBuilding C object CMakeFiles/map_service__rosidl_typesupport_c__pyext.dir/rosidl_generator_py/map_service/_map_service_s.ep.rosidl_typesupport_c.c.o\x1b[0m\n'}
+[4.232369] (map_service) StdoutLine: {'line': b'[ 90%] \x1b[32mBuilding C object CMakeFiles/map_service__rosidl_typesupport_fastrtps_c__pyext.dir/rosidl_generator_py/map_service/_map_service_s.ep.rosidl_typesupport_fastrtps_c.c.o\x1b[0m\n'}
+[4.293773] (map_service) StdoutLine: {'line': b'[100%] \x1b[32m\x1b[1mLinking CXX shared library rosidl_generator_py/map_service/map_service_s__rosidl_typesupport_fastrtps_c.cpython-38-x86_64-linux-gnu.so\x1b[0m\n'}
+[4.293960] (map_service) StdoutLine: {'line': b'[100%] \x1b[32m\x1b[1mLinking C shared library rosidl_generator_py/map_service/map_service_s__rosidl_typesupport_introspection_c.cpython-38-x86_64-linux-gnu.so\x1b[0m\n'}
+[4.294057] (map_service) StdoutLine: {'line': b'[100%] \x1b[32m\x1b[1mLinking C shared library rosidl_generator_py/map_service/map_service_s__rosidl_typesupport_c.cpython-38-x86_64-linux-gnu.so\x1b[0m\n'}
+[4.307210] (-) TimerEvent: {}
+[4.322239] (map_service) StdoutLine: {'line': b'[100%] Built target map_service__rosidl_typesupport_introspection_c__pyext\n'}
+[4.322432] (map_service) StdoutLine: {'line': b'[100%] Built target map_service__rosidl_typesupport_c__pyext\n'}
+[4.344971] (map_service) StdoutLine: {'line': b'[100%] Built target map_service__rosidl_typesupport_fastrtps_c__pyext\n'}
+[4.352597] (map_service) CommandEnded: {'returncode': 0}
+[4.382602] (map_service) JobProgress: {'identifier': 'map_service', 'progress': 'install'}
+[4.389969] (map_service) Command: {'cmd': ['/usr/bin/cmake', '--install', '/home/hayashi/map_ros/build/map_service'], 'cwd': '/home/hayashi/map_ros/build/map_service', 'env': OrderedDict([('GJS_DEBUG_TOPICS', 'JS ERROR;JS LOG'), ('LESSOPEN', '| /usr/bin/lesspipe %s'), ('USER', 'hayashi'), ('SSH_AGENT_PID', '2064'), ('XDG_SESSION_TYPE', 'x11'), ('SHLVL', '1'), ('LD_LIBRARY_PATH', '/usr/lib/x86_64-linux-gnu/gazebo-11/plugins:/opt/ros/foxy/opt/yaml_cpp_vendor/lib:/opt/ros/foxy/opt/rviz_ogre_vendor/lib:/opt/ros/foxy/lib/x86_64-linux-gnu:/opt/ros/foxy/lib'), ('HOME', '/home/hayashi'), ('OLDPWD', '/home/hayashi/map_ros/src'), ('DESKTOP_SESSION', 'ubuntu'), ('GIO_LAUNCHED_DESKTOP_FILE', '/usr/share/applications/terminator.desktop'), ('ROS_PYTHON_VERSION', '3'), ('GNOME_SHELL_SESSION_MODE', 'ubuntu'), ('GTK_MODULES', 'gail:atk-bridge'), ('MANAGERPID', '1889'), ('DBUS_SESSION_BUS_ADDRESS', 'unix:path=/run/user/1000/bus'), ('COLORTERM', 'truecolor'), ('TERMINATOR_DBUS_NAME', 'net.tenshu.Terminator21a9d5db22c73a993ff0b42f64b396873'), ('GIO_LAUNCHED_DESKTOP_FILE_PID', '5363'), ('_colcon_cd_root', '/home/hayashi/ros2_ws'), ('MANDATORY_PATH', '/usr/share/gconf/ubuntu.mandatory.path'), ('IM_CONFIG_PHASE', '1'), ('ROS_DISTRO', 'foxy'), ('LOGNAME', 'hayashi'), ('JOURNAL_STREAM', '8:50288'), ('_', '/usr/bin/colcon'), ('ROS_VERSION', '2'), ('XDG_SESSION_CLASS', 'user'), ('DEFAULTS_PATH', '/usr/share/gconf/ubuntu.default.path'), ('USERNAME', 'hayashi'), ('TERM', 'xterm-256color'), ('GAZEBO_MODEL_PATH', ':/home/hayashi/ros2_ws/src/basic_mobile_robot/models/'), ('GNOME_DESKTOP_SESSION_ID', 'this-is-deprecated'), ('ROS_LOCALHOST_ONLY', '0'), ('WINDOWPATH', '2'), ('PATH', '/opt/ros/foxy/bin:/home/hayashi/.local/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin'), ('SESSION_MANAGER', 'local/hayashi-Inspiron-3881:@/tmp/.ICE-unix/2102,unix/hayashi-Inspiron-3881:/tmp/.ICE-unix/2102'), ('INVOCATION_ID', '64861e9fe2a040c49069df33351ba8b7'), ('XDG_MENU_PREFIX', 'gnome-'), ('XDG_RUNTIME_DIR', '/run/user/1000'), ('DISPLAY', ':0'), ('TERMINATOR_DBUS_PATH', '/net/tenshu/Terminator2'), ('LANG', 'ja_JP.UTF-8'), ('XDG_CURRENT_DESKTOP', 'ubuntu:GNOME'), ('XMODIFIERS', '@im=ibus'), ('XDG_SESSION_DESKTOP', 'ubuntu'), ('XAUTHORITY', '/run/user/1000/gdm/Xauthority'), ('LS_COLORS', 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:'), ('SSH_AUTH_SOCK', '/run/user/1000/keyring/ssh'), ('ROS_DOMAIN_ID', '30'), ('AMENT_PREFIX_PATH', '/opt/ros/foxy'), ('SHELL', '/bin/bash'), ('TERMINATOR_UUID', 'urn:uuid:1ad81d7e-5cd7-4f58-8dac-c9734126d851'), ('QT_ACCESSIBILITY', '1'), ('GDMSESSION', 'ubuntu'), ('LESSCLOSE', '/usr/bin/lesspipe %s %s'), ('GPG_AGENT_INFO', '/run/user/1000/gnupg/S.gpg-agent:0:1'), ('GJS_DEBUG_OUTPUT', 'stderr'), ('QT_IM_MODULE', 'ibus'), ('PWD', '/home/hayashi/map_ros/build/map_service'), ('OPENCR_PORT', '/dev/ttyACM0'), ('TURTLEBOT3_MODEL', 'waffle'), ('XDG_CONFIG_DIRS', '/etc/xdg/xdg-ubuntu:/etc/xdg'), ('XDG_DATA_DIRS', '/usr/share/ubuntu:/usr/local/share/:/usr/share/:/var/lib/snapd/desktop'), ('LDS_MODEL', 'LDS-02'), ('PYTHONPATH', '/opt/ros/foxy/lib/python3.8/site-packages'), ('COLCON', '1'), ('VTE_VERSION', '6003'), ('OPENCR_MODEL', 'waffle'), ('CMAKE_PREFIX_PATH', '/opt/ros/foxy')]), 'shell': False}
+[4.396940] (map_service) StdoutLine: {'line': b'-- Install configuration: ""\n'}
+[4.397145] (map_service) StdoutLine: {'line': b'-- Installing: /home/hayashi/map_ros/install/map_service/share/ament_index/resource_index/rosidl_interfaces/map_service\n'}
+[4.397232] (map_service) StdoutLine: {'line': b'-- Installing: /home/hayashi/map_ros/install/map_service/include/map_service\n'}
+[4.397340] (map_service) StdoutLine: {'line': b'-- Installing: /home/hayashi/map_ros/install/map_service/include/map_service/srv\n'}
+[4.397423] (map_service) StdoutLine: {'line': b'-- Installing: /home/hayashi/map_ros/install/map_service/include/map_service/srv/detail\n'}
+[4.397493] (map_service) StdoutLine: {'line': b'-- Installing: /home/hayashi/map_ros/install/map_service/include/map_service/srv/detail/point_request__struct.h\n'}
+[4.397568] (map_service) StdoutLine: {'line': b'-- Installing: /home/hayashi/map_ros/install/map_service/include/map_service/srv/detail/point_request__functions.c\n'}
+[4.397617] (map_service) StdoutLine: {'line': b'-- Installing: /home/hayashi/map_ros/install/map_service/include/map_service/srv/detail/point_request__functions.h\n'}
+[4.397683] (map_service) StdoutLine: {'line': b'-- Installing: /home/hayashi/map_ros/install/map_service/include/map_service/srv/detail/point_request__type_support.h\n'}
+[4.397747] (map_service) StdoutLine: {'line': b'-- Installing: /home/hayashi/map_ros/install/map_service/include/map_service/srv/point_request.h\n'}
+[4.397798] (map_service) StdoutLine: {'line': b'-- Installing: /home/hayashi/map_ros/install/map_service/include/map_service/msg\n'}
+[4.397847] (map_service) StdoutLine: {'line': b'-- Installing: /home/hayashi/map_ros/install/map_service/include/map_service/msg/rosidl_generator_c__visibility_control.h\n'}
+[4.397911] (map_service) StdoutLine: {'line': b'-- Installing: /home/hayashi/map_ros/install/map_service/share/map_service/environment/library_path.sh\n'}
+[4.397961] (map_service) StdoutLine: {'line': b'-- Installing: /home/hayashi/map_ros/install/map_service/share/map_service/environment/library_path.dsv\n'}
+[4.398010] (map_service) StdoutLine: {'line': b'-- Installing: /home/hayashi/map_ros/install/map_service/lib/libmap_service__rosidl_generator_c.so\n'}
+[4.398076] (map_service) StdoutLine: {'line': b'-- Set runtime path of "/home/hayashi/map_ros/install/map_service/lib/libmap_service__rosidl_generator_c.so" to ""\n'}
+[4.398186] (map_service) StdoutLine: {'line': b'-- Up-to-date: /home/hayashi/map_ros/install/map_service/include/map_service\n'}
+[4.398287] (map_service) StdoutLine: {'line': b'-- Up-to-date: /home/hayashi/map_ros/install/map_service/include/map_service/srv\n'}
+[4.398345] (map_service) StdoutLine: {'line': b'-- Up-to-date: /home/hayashi/map_ros/install/map_service/include/map_service/srv/detail\n'}
+[4.398400] (map_service) StdoutLine: {'line': b'-- Installing: /home/hayashi/map_ros/install/map_service/include/map_service/srv/detail/point_request__rosidl_typesupport_fastrtps_c.h\n'}
+[4.398467] (map_service) StdoutLine: {'line': b'-- Up-to-date: /home/hayashi/map_ros/install/map_service/include/map_service/msg\n'}
+[4.398516] (map_service) StdoutLine: {'line': b'-- Installing: /home/hayashi/map_ros/install/map_service/include/map_service/msg/rosidl_typesupport_fastrtps_c__visibility_control.h\n'}
+[4.398565] (map_service) StdoutLine: {'line': b'-- Installing: /home/hayashi/map_ros/install/map_service/lib/libmap_service__rosidl_typesupport_fastrtps_c.so\n'}
+[4.398630] (map_service) StdoutLine: {'line': b'-- Set runtime path of "/home/hayashi/map_ros/install/map_service/lib/libmap_service__rosidl_typesupport_fastrtps_c.so" to ""\n'}
+[4.398722] (map_service) StdoutLine: {'line': b'-- Up-to-date: /home/hayashi/map_ros/install/map_service/include/map_service\n'}
+[4.398777] (map_service) StdoutLine: {'line': b'-- Up-to-date: /home/hayashi/map_ros/install/map_service/include/map_service/srv\n'}
+[4.398849] (map_service) StdoutLine: {'line': b'-- Up-to-date: /home/hayashi/map_ros/install/map_service/include/map_service/srv/detail\n'}
+[4.398898] (map_service) StdoutLine: {'line': b'-- Installing: /home/hayashi/map_ros/install/map_service/include/map_service/srv/detail/point_request__rosidl_typesupport_fastrtps_cpp.hpp\n'}
+[4.398953] (map_service) StdoutLine: {'line': b'-- Installing: /home/hayashi/map_ros/install/map_service/include/map_service/srv/detail/dds_fastrtps\n'}
+[4.399015] (map_service) StdoutLine: {'line': b'-- Up-to-date: /home/hayashi/map_ros/install/map_service/include/map_service/msg\n'}
+[4.399064] (map_service) StdoutLine: {'line': b'-- Installing: /home/hayashi/map_ros/install/map_service/include/map_service/msg/rosidl_typesupport_fastrtps_cpp__visibility_control.h\n'}
+[4.399113] (map_service) StdoutLine: {'line': b'-- Installing: /home/hayashi/map_ros/install/map_service/lib/libmap_service__rosidl_typesupport_fastrtps_cpp.so\n'}
+[4.399357] (map_service) StdoutLine: {'line': b'-- Set runtime path of "/home/hayashi/map_ros/install/map_service/lib/libmap_service__rosidl_typesupport_fastrtps_cpp.so" to ""\n'}
+[4.399423] (map_service) StdoutLine: {'line': b'-- Up-to-date: /home/hayashi/map_ros/install/map_service/include/map_service\n'}
+[4.399492] (map_service) StdoutLine: {'line': b'-- Up-to-date: /home/hayashi/map_ros/install/map_service/include/map_service/srv\n'}
+[4.399542] (map_service) StdoutLine: {'line': b'-- Up-to-date: /home/hayashi/map_ros/install/map_service/include/map_service/srv/detail\n'}
+[4.399606] (map_service) StdoutLine: {'line': b'-- Installing: /home/hayashi/map_ros/install/map_service/include/map_service/srv/detail/point_request__rosidl_typesupport_introspection_c.h\n'}
+[4.399656] (map_service) StdoutLine: {'line': b'-- Installing: /home/hayashi/map_ros/install/map_service/include/map_service/srv/detail/point_request__type_support.c\n'}
+[4.399705] (map_service) StdoutLine: {'line': b'-- Up-to-date: /home/hayashi/map_ros/install/map_service/include/map_service/msg\n'}
+[4.399756] (map_service) StdoutLine: {'line': b'-- Installing: /home/hayashi/map_ros/install/map_service/include/map_service/msg/rosidl_typesupport_introspection_c__visibility_control.h\n'}
+[4.399828] (map_service) StdoutLine: {'line': b'-- Installing: /home/hayashi/map_ros/install/map_service/lib/libmap_service__rosidl_typesupport_introspection_c.so\n'}
+[4.399893] (map_service) StdoutLine: {'line': b'-- Set runtime path of "/home/hayashi/map_ros/install/map_service/lib/libmap_service__rosidl_typesupport_introspection_c.so" to ""\n'}
+[4.399942] (map_service) StdoutLine: {'line': b'-- Installing: /home/hayashi/map_ros/install/map_service/lib/libmap_service__rosidl_typesupport_c.so\n'}
+[4.400021] (map_service) StdoutLine: {'line': b'-- Set runtime path of "/home/hayashi/map_ros/install/map_service/lib/libmap_service__rosidl_typesupport_c.so" to ""\n'}
+[4.400092] (map_service) StdoutLine: {'line': b'-- Up-to-date: /home/hayashi/map_ros/install/map_service/include/map_service\n'}
+[4.400161] (map_service) StdoutLine: {'line': b'-- Up-to-date: /home/hayashi/map_ros/install/map_service/include/map_service/srv\n'}
+[4.400237] (map_service) StdoutLine: {'line': b'-- Installing: /home/hayashi/map_ros/install/map_service/include/map_service/srv/point_request.hpp\n'}
+[4.400309] (map_service) StdoutLine: {'line': b'-- Up-to-date: /home/hayashi/map_ros/install/map_service/include/map_service/srv/detail\n'}
+[4.400374] (map_service) StdoutLine: {'line': b'-- Installing: /home/hayashi/map_ros/install/map_service/include/map_service/srv/detail/point_request__type_support.hpp\n'}
+[4.400451] (map_service) StdoutLine: {'line': b'-- Installing: /home/hayashi/map_ros/install/map_service/include/map_service/srv/detail/point_request__builder.hpp\n'}
+[4.400503] (map_service) StdoutLine: {'line': b'-- Installing: /home/hayashi/map_ros/install/map_service/include/map_service/srv/detail/point_request__struct.hpp\n'}
+[4.400587] (map_service) StdoutLine: {'line': b'-- Installing: /home/hayashi/map_ros/install/map_service/include/map_service/srv/detail/point_request__traits.hpp\n'}
+[4.400652] (map_service) StdoutLine: {'line': b'-- Up-to-date: /home/hayashi/map_ros/install/map_service/include/map_service/msg\n'}
+[4.400701] (map_service) StdoutLine: {'line': b'-- Installing: /home/hayashi/map_ros/install/map_service/include/map_service/msg/rosidl_generator_cpp__visibility_control.hpp\n'}
+[4.400763] (map_service) StdoutLine: {'line': b'-- Up-to-date: /home/hayashi/map_ros/install/map_service/include/map_service\n'}
+[4.400813] (map_service) StdoutLine: {'line': b'-- Up-to-date: /home/hayashi/map_ros/install/map_service/include/map_service/srv\n'}
+[4.400861] (map_service) StdoutLine: {'line': b'-- Up-to-date: /home/hayashi/map_ros/install/map_service/include/map_service/srv/detail\n'}
+[4.400913] (map_service) StdoutLine: {'line': b'-- Installing: /home/hayashi/map_ros/install/map_service/include/map_service/srv/detail/point_request__type_support.cpp\n'}
+[4.400962] (map_service) StdoutLine: {'line': b'-- Installing: /home/hayashi/map_ros/install/map_service/include/map_service/srv/detail/point_request__rosidl_typesupport_introspection_cpp.hpp\n'}
+[4.401026] (map_service) StdoutLine: {'line': b'-- Installing: /home/hayashi/map_ros/install/map_service/lib/libmap_service__rosidl_typesupport_introspection_cpp.so\n'}
+[4.401081] (map_service) StdoutLine: {'line': b'-- Set runtime path of "/home/hayashi/map_ros/install/map_service/lib/libmap_service__rosidl_typesupport_introspection_cpp.so" to ""\n'}
+[4.401148] (map_service) StdoutLine: {'line': b'-- Installing: /home/hayashi/map_ros/install/map_service/lib/libmap_service__rosidl_typesupport_cpp.so\n'}
+[4.401247] (map_service) StdoutLine: {'line': b'-- Set runtime path of "/home/hayashi/map_ros/install/map_service/lib/libmap_service__rosidl_typesupport_cpp.so" to ""\n'}
+[4.401312] (map_service) StdoutLine: {'line': b'-- Installing: /home/hayashi/map_ros/install/map_service/share/map_service/environment/pythonpath.sh\n'}
+[4.401380] (map_service) StdoutLine: {'line': b'-- Installing: /home/hayashi/map_ros/install/map_service/share/map_service/environment/pythonpath.dsv\n'}
+[4.402122] (map_service) StdoutLine: {'line': b'-- Installing: /home/hayashi/map_ros/install/map_service/lib/python3.8/site-packages/map_service/__init__.py\n'}
+[4.407262] (-) TimerEvent: {}
+[4.424511] (map_service) StdoutLine: {'line': b"Compiling '/home/hayashi/map_ros/install/map_service/lib/python3.8/site-packages/map_service/__init__.py'...\n"}
+[4.427048] (map_service) StdoutLine: {'line': b'-- Installing: /home/hayashi/map_ros/install/map_service/lib/python3.8/site-packages/map_service/srv\n'}
+[4.427193] (map_service) StdoutLine: {'line': b'-- Installing: /home/hayashi/map_ros/install/map_service/lib/python3.8/site-packages/map_service/srv/__init__.py\n'}
+[4.427319] (map_service) StdoutLine: {'line': b'-- Installing: /home/hayashi/map_ros/install/map_service/lib/python3.8/site-packages/map_service/srv/_point_request_s.c\n'}
+[4.427456] (map_service) StdoutLine: {'line': b'-- Installing: /home/hayashi/map_ros/install/map_service/lib/python3.8/site-packages/map_service/srv/_point_request.py\n'}
+[4.427555] (map_service) StdoutLine: {'line': b'-- Installing: /home/hayashi/map_ros/install/map_service/lib/python3.8/site-packages/map_service/map_service_s__rosidl_typesupport_fastrtps_c.cpython-38-x86_64-linux-gnu.so\n'}
+[4.427858] (map_service) StdoutLine: {'line': b'-- Set runtime path of "/home/hayashi/map_ros/install/map_service/lib/python3.8/site-packages/map_service/map_service_s__rosidl_typesupport_fastrtps_c.cpython-38-x86_64-linux-gnu.so" to ""\n'}
+[4.428066] (map_service) StdoutLine: {'line': b'-- Installing: /home/hayashi/map_ros/install/map_service/lib/python3.8/site-packages/map_service/map_service_s__rosidl_typesupport_introspection_c.cpython-38-x86_64-linux-gnu.so\n'}
+[4.428343] (map_service) StdoutLine: {'line': b'-- Set runtime path of "/home/hayashi/map_ros/install/map_service/lib/python3.8/site-packages/map_service/map_service_s__rosidl_typesupport_introspection_c.cpython-38-x86_64-linux-gnu.so" to ""\n'}
+[4.428477] (map_service) StdoutLine: {'line': b'-- Installing: /home/hayashi/map_ros/install/map_service/lib/python3.8/site-packages/map_service/map_service_s__rosidl_typesupport_c.cpython-38-x86_64-linux-gnu.so\n'}
+[4.428774] (map_service) StdoutLine: {'line': b'-- Set runtime path of "/home/hayashi/map_ros/install/map_service/lib/python3.8/site-packages/map_service/map_service_s__rosidl_typesupport_c.cpython-38-x86_64-linux-gnu.so" to ""\n'}
+[4.428875] (map_service) StdoutLine: {'line': b'-- Installing: /home/hayashi/map_ros/install/map_service/lib/libmap_service__python.so\n'}
+[4.429051] (map_service) StdoutLine: {'line': b'-- Set runtime path of "/home/hayashi/map_ros/install/map_service/lib/libmap_service__python.so" to ""\n'}
+[4.429175] (map_service) StdoutLine: {'line': b'-- Installing: /home/hayashi/map_ros/install/map_service/share/map_service/srv/PointRequest.idl\n'}
+[4.429246] (map_service) StdoutLine: {'line': b'-- Installing: /home/hayashi/map_ros/install/map_service/share/map_service/srv/PointRequest.srv\n'}
+[4.429312] (map_service) StdoutLine: {'line': b'-- Installing: /home/hayashi/map_ros/install/map_service/share/map_service/srv/PointRequest_Request.msg\n'}
+[4.429382] (map_service) StdoutLine: {'line': b'-- Installing: /home/hayashi/map_ros/install/map_service/share/map_service/srv/PointRequest_Response.msg\n'}
+[4.429450] (map_service) StdoutLine: {'line': b'-- Installing: /home/hayashi/map_ros/install/map_service/share/ament_index/resource_index/package_run_dependencies/map_service\n'}
+[4.429556] (map_service) StdoutLine: {'line': b'-- Installing: /home/hayashi/map_ros/install/map_service/share/ament_index/resource_index/parent_prefix_path/map_service\n'}
+[4.429640] (map_service) StdoutLine: {'line': b'-- Installing: /home/hayashi/map_ros/install/map_service/share/map_service/environment/ament_prefix_path.sh\n'}
+[4.429729] (map_service) StdoutLine: {'line': b'-- Installing: /home/hayashi/map_ros/install/map_service/share/map_service/environment/ament_prefix_path.dsv\n'}
+[4.429811] (map_service) StdoutLine: {'line': b'-- Installing: /home/hayashi/map_ros/install/map_service/share/map_service/environment/path.sh\n'}
+[4.429890] (map_service) StdoutLine: {'line': b'-- Installing: /home/hayashi/map_ros/install/map_service/share/map_service/environment/path.dsv\n'}
+[4.429968] (map_service) StdoutLine: {'line': b'-- Installing: /home/hayashi/map_ros/install/map_service/share/map_service/local_setup.bash\n'}
+[4.430047] (map_service) StdoutLine: {'line': b'-- Installing: /home/hayashi/map_ros/install/map_service/share/map_service/local_setup.sh\n'}
+[4.430124] (map_service) StdoutLine: {'line': b'-- Installing: /home/hayashi/map_ros/install/map_service/share/map_service/local_setup.zsh\n'}
+[4.430203] (map_service) StdoutLine: {'line': b'-- Installing: /home/hayashi/map_ros/install/map_service/share/map_service/local_setup.dsv\n'}
+[4.430281] (map_service) StdoutLine: {'line': b'-- Installing: /home/hayashi/map_ros/install/map_service/share/map_service/package.dsv\n'}
+[4.430572] (map_service) StdoutLine: {'line': b'-- Installing: /home/hayashi/map_ros/install/map_service/share/ament_index/resource_index/packages/map_service\n'}
+[4.430704] (map_service) StdoutLine: {'line': b'-- Installing: /home/hayashi/map_ros/install/map_service/share/map_service/cmake/map_service__rosidl_generator_cExport.cmake\n'}
+[4.430795] (map_service) StdoutLine: {'line': b'-- Installing: /home/hayashi/map_ros/install/map_service/share/map_service/cmake/map_service__rosidl_generator_cExport-noconfig.cmake\n'}
+[4.430915] (map_service) StdoutLine: {'line': b'-- Installing: /home/hayashi/map_ros/install/map_service/share/map_service/cmake/map_service__rosidl_typesupport_introspection_cExport.cmake\n'}
+[4.431007] (map_service) StdoutLine: {'line': b'-- Installing: /home/hayashi/map_ros/install/map_service/share/map_service/cmake/map_service__rosidl_typesupport_introspection_cExport-noconfig.cmake\n'}
+[4.431150] (map_service) StdoutLine: {'line': b'-- Installing: /home/hayashi/map_ros/install/map_service/share/map_service/cmake/map_service__rosidl_typesupport_cExport.cmake\n'}
+[4.431334] (map_service) StdoutLine: {'line': b'-- Installing: /home/hayashi/map_ros/install/map_service/share/map_service/cmake/map_service__rosidl_typesupport_cExport-noconfig.cmake\n'}
+[4.431446] (map_service) StdoutLine: {'line': b'-- Installing: /home/hayashi/map_ros/install/map_service/share/map_service/cmake/map_service__rosidl_generator_cppExport.cmake\n'}
+[4.431570] (map_service) StdoutLine: {'line': b'-- Installing: /home/hayashi/map_ros/install/map_service/share/map_service/cmake/map_service__rosidl_typesupport_introspection_cppExport.cmake\n'}
+[4.431659] (map_service) StdoutLine: {'line': b'-- Installing: /home/hayashi/map_ros/install/map_service/share/map_service/cmake/map_service__rosidl_typesupport_introspection_cppExport-noconfig.cmake\n'}
+[4.431772] (map_service) StdoutLine: {'line': b'-- Installing: /home/hayashi/map_ros/install/map_service/share/map_service/cmake/map_service__rosidl_typesupport_cppExport.cmake\n'}
+[4.431859] (map_service) StdoutLine: {'line': b'-- Installing: /home/hayashi/map_ros/install/map_service/share/map_service/cmake/map_service__rosidl_typesupport_cppExport-noconfig.cmake\n'}
+[4.431945] (map_service) StdoutLine: {'line': b'-- Installing: /home/hayashi/map_ros/install/map_service/share/map_service/cmake/rosidl_cmake-extras.cmake\n'}
+[4.432026] (map_service) StdoutLine: {'line': b'-- Installing: /home/hayashi/map_ros/install/map_service/share/map_service/cmake/ament_cmake_export_dependencies-extras.cmake\n'}
+[4.432111] (map_service) StdoutLine: {'line': b'-- Installing: /home/hayashi/map_ros/install/map_service/share/map_service/cmake/ament_cmake_export_libraries-extras.cmake\n'}
+[4.432194] (map_service) StdoutLine: {'line': b'-- Installing: /home/hayashi/map_ros/install/map_service/share/map_service/cmake/ament_cmake_export_targets-extras.cmake\n'}
+[4.432274] (map_service) StdoutLine: {'line': b'-- Installing: /home/hayashi/map_ros/install/map_service/share/map_service/cmake/ament_cmake_export_include_directories-extras.cmake\n'}
+[4.432356] (map_service) StdoutLine: {'line': b'-- Installing: /home/hayashi/map_ros/install/map_service/share/map_service/cmake/rosidl_cmake_export_typesupport_libraries-extras.cmake\n'}
+[4.432435] (map_service) StdoutLine: {'line': b'-- Installing: /home/hayashi/map_ros/install/map_service/share/map_service/cmake/rosidl_cmake_export_typesupport_targets-extras.cmake\n'}
+[4.432517] (map_service) StdoutLine: {'line': b'-- Installing: /home/hayashi/map_ros/install/map_service/share/map_service/cmake/map_serviceConfig.cmake\n'}
+[4.432583] (map_service) StdoutLine: {'line': b'-- Installing: /home/hayashi/map_ros/install/map_service/share/map_service/cmake/map_serviceConfig-version.cmake\n'}
+[4.432653] (map_service) StdoutLine: {'line': b'-- Installing: /home/hayashi/map_ros/install/map_service/share/map_service/package.xml\n'}
+[4.434479] (map_service) CommandEnded: {'returncode': 0}
+[4.512653] (-) TimerEvent: {}
+[4.613629] (-) TimerEvent: {}
+[4.714912] (-) TimerEvent: {}
+[4.816934] (-) TimerEvent: {}
+[4.900039] (map_service) JobEnded: {'identifier': 'map_service', 'rc': 0}
+[4.900319] (map_point) JobStarted: {'identifier': 'map_point'}
+[4.917407] (-) TimerEvent: {}
+[5.018940] (-) TimerEvent: {}
+[5.119515] (-) TimerEvent: {}
+[5.219916] (-) TimerEvent: {}
+[5.320234] (-) TimerEvent: {}
+[5.420473] (-) TimerEvent: {}
+[5.520761] (-) TimerEvent: {}
+[5.621078] (-) TimerEvent: {}
+[5.721318] (-) TimerEvent: {}
+[5.783942] (map_point) Command: {'cmd': ['/usr/bin/python3', 'setup.py', 'egg_info', '--egg-base', '../../build/map_point', 'build', '--build-base', '/home/hayashi/map_ros/build/map_point/build', 'install', '--record', '/home/hayashi/map_ros/build/map_point/install.log', '--install-scripts', '$base/lib/map_point', '--single-version-externally-managed'], 'cwd': '/home/hayashi/map_ros/src/map_point', 'env': {'GJS_DEBUG_TOPICS': 'JS ERROR;JS LOG', 'LESSOPEN': '| /usr/bin/lesspipe %s', 'USER': 'hayashi', 'SSH_AGENT_PID': '2064', 'XDG_SESSION_TYPE': 'x11', 'SHLVL': '1', 'LD_LIBRARY_PATH': '/home/hayashi/map_ros/install/map_service/lib:/usr/lib/x86_64-linux-gnu/gazebo-11/plugins:/opt/ros/foxy/opt/yaml_cpp_vendor/lib:/opt/ros/foxy/opt/rviz_ogre_vendor/lib:/opt/ros/foxy/lib/x86_64-linux-gnu:/opt/ros/foxy/lib', 'HOME': '/home/hayashi', 'OLDPWD': '/home/hayashi/map_ros/src', 'DESKTOP_SESSION': 'ubuntu', 'GIO_LAUNCHED_DESKTOP_FILE': '/usr/share/applications/terminator.desktop', 'ROS_PYTHON_VERSION': '3', 'GNOME_SHELL_SESSION_MODE': 'ubuntu', 'GTK_MODULES': 'gail:atk-bridge', 'MANAGERPID': '1889', 'DBUS_SESSION_BUS_ADDRESS': 'unix:path=/run/user/1000/bus', 'COLORTERM': 'truecolor', 'TERMINATOR_DBUS_NAME': 'net.tenshu.Terminator21a9d5db22c73a993ff0b42f64b396873', 'GIO_LAUNCHED_DESKTOP_FILE_PID': '5363', '_colcon_cd_root': '/home/hayashi/ros2_ws', 'MANDATORY_PATH': '/usr/share/gconf/ubuntu.mandatory.path', 'IM_CONFIG_PHASE': '1', 'ROS_DISTRO': 'foxy', 'LOGNAME': 'hayashi', 'JOURNAL_STREAM': '8:50288', '_': '/usr/bin/colcon', 'ROS_VERSION': '2', 'XDG_SESSION_CLASS': 'user', 'DEFAULTS_PATH': '/usr/share/gconf/ubuntu.default.path', 'USERNAME': 'hayashi', 'TERM': 'xterm-256color', 'GAZEBO_MODEL_PATH': ':/home/hayashi/ros2_ws/src/basic_mobile_robot/models/', 'GNOME_DESKTOP_SESSION_ID': 'this-is-deprecated', 'ROS_LOCALHOST_ONLY': '0', 'WINDOWPATH': '2', 'PATH': '/opt/ros/foxy/bin:/home/hayashi/.local/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin', 'SESSION_MANAGER': 'local/hayashi-Inspiron-3881:@/tmp/.ICE-unix/2102,unix/hayashi-Inspiron-3881:/tmp/.ICE-unix/2102', 'INVOCATION_ID': '64861e9fe2a040c49069df33351ba8b7', 'XDG_MENU_PREFIX': 'gnome-', 'XDG_RUNTIME_DIR': '/run/user/1000', 'DISPLAY': ':0', 'TERMINATOR_DBUS_PATH': '/net/tenshu/Terminator2', 'LANG': 'ja_JP.UTF-8', 'XDG_CURRENT_DESKTOP': 'ubuntu:GNOME', 'XMODIFIERS': '@im=ibus', 'XDG_SESSION_DESKTOP': 'ubuntu', 'XAUTHORITY': '/run/user/1000/gdm/Xauthority', 'LS_COLORS': 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:', 'SSH_AUTH_SOCK': '/run/user/1000/keyring/ssh', 'ROS_DOMAIN_ID': '30', 'AMENT_PREFIX_PATH': '/home/hayashi/map_ros/install/map_service:/opt/ros/foxy', 'SHELL': '/bin/bash', 'TERMINATOR_UUID': 'urn:uuid:1ad81d7e-5cd7-4f58-8dac-c9734126d851', 'QT_ACCESSIBILITY': '1', 'GDMSESSION': 'ubuntu', 'LESSCLOSE': '/usr/bin/lesspipe %s %s', 'GPG_AGENT_INFO': '/run/user/1000/gnupg/S.gpg-agent:0:1', 'GJS_DEBUG_OUTPUT': 'stderr', 'QT_IM_MODULE': 'ibus', 'PWD': '/home/hayashi/map_ros/build/map_point', 'OPENCR_PORT': '/dev/ttyACM0', 'TURTLEBOT3_MODEL': 'waffle', 'XDG_CONFIG_DIRS': '/etc/xdg/xdg-ubuntu:/etc/xdg', 'XDG_DATA_DIRS': '/usr/share/ubuntu:/usr/local/share/:/usr/share/:/var/lib/snapd/desktop', 'LDS_MODEL': 'LDS-02', 'PYTHONPATH': '/home/hayashi/map_ros/build/map_point/prefix_override:/home/hayashi/map_ros/install/map_point/lib/python3.8/site-packages:/home/hayashi/map_ros/install/map_service/lib/python3.8/site-packages:/opt/ros/foxy/lib/python3.8/site-packages', 'COLCON': '1', 'VTE_VERSION': '6003', 'OPENCR_MODEL': 'waffle', 'CMAKE_PREFIX_PATH': '/home/hayashi/map_ros/install/map_service'}, 'shell': False}
+[5.821415] (-) TimerEvent: {}
+[5.921661] (-) TimerEvent: {}
+[5.956578] (map_point) StdoutLine: {'line': b'running egg_info\n'}
+[5.956975] (map_point) StdoutLine: {'line': b'creating ../../build/map_point/map_point.egg-info\n'}
+[5.957221] (map_point) StdoutLine: {'line': b'writing ../../build/map_point/map_point.egg-info/PKG-INFO\n'}
+[5.957410] (map_point) StdoutLine: {'line': b'writing dependency_links to ../../build/map_point/map_point.egg-info/dependency_links.txt\n'}
+[5.957689] (map_point) StdoutLine: {'line': b'writing entry points to ../../build/map_point/map_point.egg-info/entry_points.txt\n'}
+[5.957769] (map_point) StdoutLine: {'line': b'writing requirements to ../../build/map_point/map_point.egg-info/requires.txt\n'}
+[5.957826] (map_point) StdoutLine: {'line': b'writing top-level names to ../../build/map_point/map_point.egg-info/top_level.txt\n'}
+[5.961961] (map_point) StdoutLine: {'line': b"writing manifest file '../../build/map_point/map_point.egg-info/SOURCES.txt'\n"}
+[5.987349] (map_point) StdoutLine: {'line': b"reading manifest file '../../build/map_point/map_point.egg-info/SOURCES.txt'\n"}
+[5.987912] (map_point) StdoutLine: {'line': b"writing manifest file '../../build/map_point/map_point.egg-info/SOURCES.txt'\n"}
+[5.988022] (map_point) StdoutLine: {'line': b'running build\n'}
+[5.988215] (map_point) StdoutLine: {'line': b'running build_py\n'}
+[5.988304] (map_point) StdoutLine: {'line': b'creating /home/hayashi/map_ros/build/map_point/build\n'}
+[5.988478] (map_point) StdoutLine: {'line': b'creating /home/hayashi/map_ros/build/map_point/build/lib\n'}
+[5.988557] (map_point) StdoutLine: {'line': b'creating /home/hayashi/map_ros/build/map_point/build/lib/map_point\n'}
+[5.988613] (map_point) StdoutLine: {'line': b'copying map_point/__init__.py -> /home/hayashi/map_ros/build/map_point/build/lib/map_point\n'}
+[5.988666] (map_point) StdoutLine: {'line': b'copying map_point/point.py -> /home/hayashi/map_ros/build/map_point/build/lib/map_point\n'}
+[5.988716] (map_point) StdoutLine: {'line': b'running install\n'}
+[5.989031] (map_point) StdoutLine: {'line': b'running install_lib\n'}
+[5.989666] (map_point) StdoutLine: {'line': b'creating /home/hayashi/map_ros/install/map_point/lib/python3.8/site-packages/map_point\n'}
+[5.989767] (map_point) StdoutLine: {'line': b'copying /home/hayashi/map_ros/build/map_point/build/lib/map_point/__init__.py -> /home/hayashi/map_ros/install/map_point/lib/python3.8/site-packages/map_point\n'}
+[5.989840] (map_point) StdoutLine: {'line': b'copying /home/hayashi/map_ros/build/map_point/build/lib/map_point/point.py -> /home/hayashi/map_ros/install/map_point/lib/python3.8/site-packages/map_point\n'}
+[5.990150] (map_point) StdoutLine: {'line': b'byte-compiling /home/hayashi/map_ros/install/map_point/lib/python3.8/site-packages/map_point/__init__.py to __init__.cpython-38.pyc\n'}
+[5.990969] (map_point) StdoutLine: {'line': b'byte-compiling /home/hayashi/map_ros/install/map_point/lib/python3.8/site-packages/map_point/point.py to point.cpython-38.pyc\n'}
+[5.991385] (map_point) StdoutLine: {'line': b'running install_data\n'}
+[5.991770] (map_point) StdoutLine: {'line': b'creating /home/hayashi/map_ros/install/map_point/share/ament_index\n'}
+[5.991860] (map_point) StdoutLine: {'line': b'creating /home/hayashi/map_ros/install/map_point/share/ament_index/resource_index\n'}
+[5.991915] (map_point) StdoutLine: {'line': b'creating /home/hayashi/map_ros/install/map_point/share/ament_index/resource_index/packages\n'}
+[5.992283] (map_point) StdoutLine: {'line': b'copying resource/map_point -> /home/hayashi/map_ros/install/map_point/share/ament_index/resource_index/packages\n'}
+[5.992500] (map_point) StdoutLine: {'line': b'copying package.xml -> /home/hayashi/map_ros/install/map_point/share/map_point\n'}
+[5.992719] (map_point) StdoutLine: {'line': b'running install_egg_info\n'}
+[5.993632] (map_point) StdoutLine: {'line': b'Copying ../../build/map_point/map_point.egg-info to /home/hayashi/map_ros/install/map_point/lib/python3.8/site-packages/map_point-0.0.0-py3.8.egg-info\n'}
+[5.994196] (map_point) StdoutLine: {'line': b'running install_scripts\n'}
+[6.006440] (map_point) StdoutLine: {'line': b'Installing service script to /home/hayashi/map_ros/install/map_point/lib/map_point\n'}
+[6.006707] (map_point) StdoutLine: {'line': b"writing list of installed files to '/home/hayashi/map_ros/build/map_point/install.log'\n"}
+[6.019565] (map_point) CommandEnded: {'returncode': 0}
+[6.022593] (-) TimerEvent: {}
+[6.122868] (-) TimerEvent: {}
+[6.134308] (map_point) JobEnded: {'identifier': 'map_point', 'rc': 0}
+[6.134780] (-) EventReactorShutdown: {}

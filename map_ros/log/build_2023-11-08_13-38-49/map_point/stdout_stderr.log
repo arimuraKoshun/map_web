@@ -1,0 +1,35 @@
+running egg_info
+creating ../../build/map_point/map_point.egg-info
+writing ../../build/map_point/map_point.egg-info/PKG-INFO
+writing dependency_links to ../../build/map_point/map_point.egg-info/dependency_links.txt
+writing entry points to ../../build/map_point/map_point.egg-info/entry_points.txt
+writing requirements to ../../build/map_point/map_point.egg-info/requires.txt
+writing top-level names to ../../build/map_point/map_point.egg-info/top_level.txt
+writing manifest file '../../build/map_point/map_point.egg-info/SOURCES.txt'
+reading manifest file '../../build/map_point/map_point.egg-info/SOURCES.txt'
+writing manifest file '../../build/map_point/map_point.egg-info/SOURCES.txt'
+running build
+running build_py
+creating /home/hayashi/map_ros/build/map_point/build
+creating /home/hayashi/map_ros/build/map_point/build/lib
+creating /home/hayashi/map_ros/build/map_point/build/lib/map_point
+copying map_point/__init__.py -> /home/hayashi/map_ros/build/map_point/build/lib/map_point
+copying map_point/point.py -> /home/hayashi/map_ros/build/map_point/build/lib/map_point
+running install
+running install_lib
+creating /home/hayashi/map_ros/install/map_point/lib/python3.8/site-packages/map_point
+copying /home/hayashi/map_ros/build/map_point/build/lib/map_point/__init__.py -> /home/hayashi/map_ros/install/map_point/lib/python3.8/site-packages/map_point
+copying /home/hayashi/map_ros/build/map_point/build/lib/map_point/point.py -> /home/hayashi/map_ros/install/map_point/lib/python3.8/site-packages/map_point
+byte-compiling /home/hayashi/map_ros/install/map_point/lib/python3.8/site-packages/map_point/__init__.py to __init__.cpython-38.pyc
+byte-compiling /home/hayashi/map_ros/install/map_point/lib/python3.8/site-packages/map_point/point.py to point.cpython-38.pyc
+running install_data
+creating /home/hayashi/map_ros/install/map_point/share/ament_index
+creating /home/hayashi/map_ros/install/map_point/share/ament_index/resource_index
+creating /home/hayashi/map_ros/install/map_point/share/ament_index/resource_index/packages
+copying resource/map_point -> /home/hayashi/map_ros/install/map_point/share/ament_index/resource_index/packages
+copying package.xml -> /home/hayashi/map_ros/install/map_point/share/map_point
+running install_egg_info
+Copying ../../build/map_point/map_point.egg-info to /home/hayashi/map_ros/install/map_point/lib/python3.8/site-packages/map_point-0.0.0-py3.8.egg-info
+running install_scripts
+Installing service script to /home/hayashi/map_ros/install/map_point/lib/map_point
+writing list of installed files to '/home/hayashi/map_ros/build/map_point/install.log'

@@ -1,0 +1,37 @@
+[0.884s] Invoking command in '/home/hayashi/map_ros/src/map_point': AMENT_PREFIX_PATH=/home/hayashi/map_ros/install/map_service:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/hayashi/map_ros/install/map_service LD_LIBRARY_PATH=/home/hayashi/map_ros/install/map_service/lib:${LD_LIBRARY_PATH} PYTHONPATH=/home/hayashi/map_ros/build/map_point/prefix_override:/home/hayashi/map_ros/install/map_point/lib/python3.8/site-packages:/home/hayashi/map_ros/install/map_service/lib/python3.8/site-packages:${PYTHONPATH} /usr/bin/python3 setup.py egg_info --egg-base ../../build/map_point build --build-base /home/hayashi/map_ros/build/map_point/build install --record /home/hayashi/map_ros/build/map_point/install.log --install-scripts $base/lib/map_point --single-version-externally-managed
+[1.056s] running egg_info
+[1.057s] creating ../../build/map_point/map_point.egg-info
+[1.057s] writing ../../build/map_point/map_point.egg-info/PKG-INFO
+[1.057s] writing dependency_links to ../../build/map_point/map_point.egg-info/dependency_links.txt
+[1.057s] writing entry points to ../../build/map_point/map_point.egg-info/entry_points.txt
+[1.057s] writing requirements to ../../build/map_point/map_point.egg-info/requires.txt
+[1.058s] writing top-level names to ../../build/map_point/map_point.egg-info/top_level.txt
+[1.062s] writing manifest file '../../build/map_point/map_point.egg-info/SOURCES.txt'
+[1.087s] reading manifest file '../../build/map_point/map_point.egg-info/SOURCES.txt'
+[1.088s] writing manifest file '../../build/map_point/map_point.egg-info/SOURCES.txt'
+[1.088s] running build
+[1.088s] running build_py
+[1.088s] creating /home/hayashi/map_ros/build/map_point/build
+[1.088s] creating /home/hayashi/map_ros/build/map_point/build/lib
+[1.088s] creating /home/hayashi/map_ros/build/map_point/build/lib/map_point
+[1.088s] copying map_point/__init__.py -> /home/hayashi/map_ros/build/map_point/build/lib/map_point
+[1.088s] copying map_point/point.py -> /home/hayashi/map_ros/build/map_point/build/lib/map_point
+[1.088s] running install
+[1.089s] running install_lib
+[1.089s] creating /home/hayashi/map_ros/install/map_point/lib/python3.8/site-packages/map_point
+[1.089s] copying /home/hayashi/map_ros/build/map_point/build/lib/map_point/__init__.py -> /home/hayashi/map_ros/install/map_point/lib/python3.8/site-packages/map_point
+[1.090s] copying /home/hayashi/map_ros/build/map_point/build/lib/map_point/point.py -> /home/hayashi/map_ros/install/map_point/lib/python3.8/site-packages/map_point
+[1.090s] byte-compiling /home/hayashi/map_ros/install/map_point/lib/python3.8/site-packages/map_point/__init__.py to __init__.cpython-38.pyc
+[1.091s] byte-compiling /home/hayashi/map_ros/install/map_point/lib/python3.8/site-packages/map_point/point.py to point.cpython-38.pyc
+[1.091s] running install_data
+[1.092s] creating /home/hayashi/map_ros/install/map_point/share/ament_index
+[1.092s] creating /home/hayashi/map_ros/install/map_point/share/ament_index/resource_index
+[1.092s] creating /home/hayashi/map_ros/install/map_point/share/ament_index/resource_index/packages
+[1.092s] copying resource/map_point -> /home/hayashi/map_ros/install/map_point/share/ament_index/resource_index/packages
+[1.092s] copying package.xml -> /home/hayashi/map_ros/install/map_point/share/map_point
+[1.092s] running install_egg_info
+[1.093s] Copying ../../build/map_point/map_point.egg-info to /home/hayashi/map_ros/install/map_point/lib/python3.8/site-packages/map_point-0.0.0-py3.8.egg-info
+[1.094s] running install_scripts
+[1.106s] Installing service script to /home/hayashi/map_ros/install/map_point/lib/map_point
+[1.106s] writing list of installed files to '/home/hayashi/map_ros/build/map_point/install.log'
+[1.119s] Invoked command in '/home/hayashi/map_ros/src/map_point' returned '0': AMENT_PREFIX_PATH=/home/hayashi/map_ros/install/map_service:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/hayashi/map_ros/install/map_service LD_LIBRARY_PATH=/home/hayashi/map_ros/install/map_service/lib:${LD_LIBRARY_PATH} PYTHONPATH=/home/hayashi/map_ros/build/map_point/prefix_override:/home/hayashi/map_ros/install/map_point/lib/python3.8/site-packages:/home/hayashi/map_ros/install/map_service/lib/python3.8/site-packages:${PYTHONPATH} /usr/bin/python3 setup.py egg_info --egg-base ../../build/map_point build --build-base /home/hayashi/map_ros/build/map_point/build install --record /home/hayashi/map_ros/build/map_point/install.log --install-scripts $base/lib/map_point --single-version-externally-managed

@@ -1,0 +1,17 @@
+// generated from rosidl_adapter/resource/srv.idl.em
+// with input from map_service/srv/PointRequest.srv
+// generated code does not contain a copyright notice
+
+
+module map_service {
+  module srv {
+    struct PointRequest_Request {
+      sequence<double> lat;
+
+      sequence<double> lng;
+    };
+    struct PointRequest_Response {
+      string message;
+    };
+  };
+};

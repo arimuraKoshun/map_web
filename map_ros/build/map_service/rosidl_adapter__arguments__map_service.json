@@ -1,0 +1,6 @@
+{
+  "package_name": "map_service",
+  "non_idl_tuples": [
+    "/home/hayashi/map_ros/src/map_service:srv/PointRequest.srv"
+  ]
+}

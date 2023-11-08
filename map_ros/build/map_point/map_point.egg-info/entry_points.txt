@@ -1,0 +1,3 @@
+[console_scripts]
+service = map_point.point:main
+
