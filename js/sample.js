@@ -11,6 +11,9 @@ var log_rows = [];
 
 var rightsidebar = document.getElementById("right-sidebar");
 
+var send_lat = [];
+var send_lng = [];
+
 
 function initMap() {
   const bangalore = { lat: 33.655198, lng:130.673920 };
@@ -24,6 +27,7 @@ function initMap() {
   // This event listener calls addMarker() when the map is clicked.
   google.maps.event.addListener(map, "click", (event) => {
     addMarker(event.latLng, map);
+    show_distance();
   });
 
   google.maps.event.addListener(map, "rightclick", (event) => {
@@ -44,6 +48,8 @@ function addMarker(location, map) {
   });
 
   markers.push(marker);
+  send_lat.push(location.lat());
+  send_lng.push(location.lng());
 
   // 新しい行を作成して情報を追加
   var newLine = document.createElement("p");
@@ -54,11 +60,34 @@ function addMarker(location, map) {
 
 }
 
+function show_distance() {
+  if (markers.length < 2) {
+    document.getElementById("distance").innerHTML = "Not enough markers.";
+    return;
+  }
+
+  var latLng1 = markers[markers.length - 2].getPosition();
+  var latLng2 = markers[markers.length - 1].getPosition();
+
+  var distance = google.maps.geometry.spherical.computeDistanceBetween(
+    latLng1,
+    latLng2
+  );
+
+  document.getElementById("distance").innerHTML =
+    "Distance: " + distance.toFixed(2) + " meters";
+}
+
 function removeMarker() {
   labelIndex--;
   if (markers.length > 0) {
     var lastMarker = markers.pop(); // 配列から最後の要素を削除し、その要素を取得
     lastMarker.setMap(null); // マーカーを地図から削除
+  }
+
+  if(send_lat.length > 0) {
+    send_lat.pop();
+    send_lng.pop();
   }
 
   if (log_rows.length > 0) {

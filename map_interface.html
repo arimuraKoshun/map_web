@@ -16,6 +16,11 @@
             padding: 10px;
             overflow-y: auto; /* コンテンツがはみ出た場合にスクロールバーを表示 */
         }
+        .my-button {
+            width: 150px; /* 幅を指定（ピクセルまたは他の単位で指定） */
+            height: 50px; /* 高さを指定（ピクセルまたは他の単位で指定） */
+            /* 他のスタイルも追加できます */
+          }
     </style>
   </head>
   <body>
@@ -31,13 +36,15 @@
     <p>Subscribing to topic: <code>/gps/fix</code></p>
     <p><code>/gps/fix</code> messages received: <span id="messages" style="font-weight: bold;"></span></p>
     <div id="gps_data_display"></div>
-    <button id="call_service_button">Call ROS Service</button>
-
+    <br>
+    <button id="send target position" class="my-button">send target position</button>
+    <div id="distance"></div>
+    <br>
     <script type="text/javascript" src="js/sample.js"></script>
     <script type="text/javascript" src="js/sample2.js"></script>
 
     <script async defer
-      src="https://maps.googleapis.com/maps/api/js?language=en&key=AIzaSyBou_onn86hIAu0NZNeAqow_59t2CXUfqk&callback=initMap">
+      src="https://maps.googleapis.com/maps/api/js?libraries=geometry&language=en&key=AIzaSyBou_onn86hIAu0NZNeAqow_59t2CXUfqk&callback=initMap">
     </script>
   </body>
 </html>

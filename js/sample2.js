@@ -126,34 +126,37 @@ const ros = new ROSLIB.Ros({
           console.log('Latitude: ' + message.latitude);
           console.log('Longitude: ' + message.longitude);
           console.log('Altitude: ' + message.altitude);
+          // for(var j = 0;j < coordinate.length; j++ ){
+          //   console.log(coordinate[j][0] + ',' + coordinate[j][1]);
+          // }
          // gps.unsubscribe();
         }
 
-                 // ブラウザにデータを表示
-      var displayDiv = document.getElementById('gps_data_display');  // HTML内の表示する要素を指定
-      displayDiv.innerHTML = 'Latitude: ' + message.latitude + '<br>' +
-                      'Longitude: ' + message.longitude + '<br>' +
-                      'Altitude: ' + message.altitude;
+                  // ブラウザにデータを表示
+        var displayDiv = document.getElementById('gps_data_display');  // HTML内の表示する要素を指定
+        displayDiv.innerHTML = 'Latitude: ' + message.latitude + '<br>' +
+                        'Longitude: ' + message.longitude + '<br>' +
+                        'Altitude: ' + message.altitude;
       });
 
 
-      var callServiceButton = document.getElementById('call_service_button');
+      var callServiceButton = document.getElementById('send target position');
       callServiceButton.addEventListener('click', function() {
     
-        var addTwoIntsClient = new ROSLIB.Service({
+        var Client = new ROSLIB.Service({
           ros : ros,
           name : '/receive_point',
-          serviceType : 'map_service/Mappoint'
+          serviceType : 'map_service/srv/PointRequest'
         });
       
         var request = new ROSLIB.ServiceRequest({
-          lat : lat,
-          lon : long
+          lat : send_lat,
+          lng : send_lng
         });
       
-        addTwoIntsClient.callService(request, function(result) {
+        Client.callService(request, function(result) {
           console.log('Result for service call on '
-            + addTwoIntsClient.name
+            + Client.name
             + ': '
             + result.message);
         });
