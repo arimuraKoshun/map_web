@@ -1,116 +1,67 @@
 #####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
 
 
-#!/usr/bin/env python3
-
-import rospy
-import smach
-import smach_ros
-import yaml
-import rospkg
-import os
+import tkinter as tk
+import datetime
 import cv2
-from sensor_msgs.msg import Image
-from cv_bridge import CvBridge, CvBridgeError
+import os
+import json
+from PIL import Image, ImageTk
 
+#image, ID
+image_bgr = cv2.imread("Number_plate.jpg")
+place = 2
 
-class Init(smach.State):
-    def __init__(self):
-        smach.State.__init__(self,outcomes=['outcome0'])
-        rospy.set_param("current_parking_num",1)
+#read database
+with open('parking_database.json') as f:
+    df = json.load(f)
+
+#hold imges
+imgs =[]
+
+#GUI
+root = tk.Tk()
+root.title("違法駐車を検知しました")    
+root.geometry("900x600")
+
+#文字を挿入する関数
+def Insert_Text(shown_text, grid_x, grid_y, Font = "meyrio, 20"):
+    lb = tk.Label(root, text= shown_text, bg = 'white', font = Font)
+    lb.place(x = grid_x, y= grid_y)
     
-    def execute(self,userdata):
-        
-        rospy.loginfo('Start statemacine')
-        
-        return 'outcome0'
+#cv2imageの出力
+def Show_cv2img(canvas, shown_img, grid_x=0, grid_y=0, fx=100, fy=100):
+    image_bgr_resized = cv2.resize(shown_img, (fx, fy))
+    image_rgb = cv2.cvtColor(image_bgr_resized, cv2.COLOR_BGR2RGB) # imreadはBGRなのでRGBに変換
+    image_pil = Image.fromarray(image_rgb) # RGBからPILフォーマットへ変換
+    image_tk  = ImageTk.PhotoImage(image_pil) # ImageTkフォーマットへ変換
+    canvas.create_image(grid_x, grid_y, image=image_tk, anchor='nw') # ImageTk 画像配置
+    imgs.append(image_tk)#hold image
 
+    
+#frame creation
+output_frame = tk.Frame(root, width=900, height=800, bg='white')
+output_frame.pack()
 
-class Go_parking(smach.State):
-    def __init__(self):
-        smach.State.__init__(self, outcomes=['outcome1'])
-        rospack = rospkg.RosPack()
-        package_path = rospack.get_path('beginner_tutorials')
-        package_path = os.path.join(package_path,"config/parking_position.yaml")
-        print(package_path)
-        self.parking_yaml = rospy.get_param('~yaml_file',package_path)
+#canvas creation
+scroll_canvas = tk.Canvas(output_frame, width=900, height=800, bg='white')
+scroll_canvas.grid(column=0, row=0)
+scroll_canvas.config(scrollregion=(0, 0, 900,800))
 
-    def get_next_pos(self,parking_num):
-        with open(self.parking_yaml,'r') as file:
-            try:
-                params = yaml.safe_load(file)
-                target_pos = params['parking_pos'][parking_num][0]
+#insert text
+Insert_Text("駐車番号 :", 600, 200)
+Insert_Text(place, 750, 200)
+Insert_Text("ご契約者名 :", 600, 250)
+Insert_Text(df[place - 1]['name'], 750, 250)
+Insert_Text("違法駐車を検知しました", 50, 50, Font = "meyrio, 40")
 
-                return target_pos
-            except yaml.YAMLError as exc:
-                rospy.logger(f"Error parking YAML file: {exc}")
+dt_now = datetime.datetime.now()
+dt_text = dt_now.strftime('%Y年%m月%d日%H:%M:%S')
+Insert_Text(dt_text, 300, 560)
 
-
-    def execute(self, userdata):
-        parking_num = rospy.get_param("current_parking_num")
-        pos = self.get_next_pos(parking_num)
-        print(pos)
-        
-        
-        rospy.loginfo('Go to park: ' + str(parking_num))
-        rospy.sleep(1)
-        return 'outcome1'
-
-
-class Image_recog(smach.State):
-    def __init__(self):
-        smach.State.__init__(self, outcomes=['outcome2','outcome3'])
-
-    def execute(self, userdata):
-        rospy.loginfo('Number recognition start')
-        rospy.sleep(1)
-        return 'outcome2'
-
-
-class Display_gui(smach.State):
-    def __init__(self):
-        smach.State.__init__(self, outcomes=['outcome4', "outcome5"])
-        self.n = 0
-
-    def execute(self, userdata):
-        rospy.loginfo('Display gui')
-        rospy.sleep(1)
-        self.n += 1
-        if self.n % 2 == 0:
-            return "outcome4"
-        else:
-            return "outcome5"
-
-# main
-def main():
-    rospy.init_node('smach_parking_system_state_machine')
-
-    # Create a SMACH state machine
-    sm = smach.StateMachine(outcomes=['EXIT'])
-
-    # Open the container
-    with sm:
-        smach.StateMachine.add('Init', Init(),
-                               transitions={'outcome0':'Go_parking'})
-        # Add states to the container
-        smach.StateMachine.add('Go_parking', Go_parking(),
-                               transitions={'outcome1':'Image_recog'})
-
-        # TODO: Fix transition to "HOGE" state instead of "FOO"
-        smach.StateMachine.add('Image_recog', Image_recog(),
-                               transitions={'outcome2':'Display_gui',
-                                            'outcome3':'Go_parking',})
-
-        # TODO: define new state "HOGE"
-        smach.StateMachine.add('Display_gui', Display_gui(),
-                               transitions={'outcome4':'EXIT',
-                                            'outcome5':'Go_parking'})
-
-    # Execute SMACH plan
-    sis = smach_ros.IntrospectionServer("sm_server", sm, "/ROOT")
-    sis.start()
-    outcome = sm.execute()
-    sis.stop()
+#show img
+Show_cv2img(scroll_canvas, image_bgr, grid_x=50, grid_y=150, fx=500, fy=400)
+root.mainloop()
 
 if __name__ == '__main__':
     main()
