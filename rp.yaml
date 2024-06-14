@@ -1,0 +1,126 @@
+#スタート位置公開後，Wait4Guestステートにおいて最初移動するか決める
+# Ture=動く， False=動かない（スタート地点のままゲストを迎える）
+MOVE_AT_FIRST : True
+
+#入り口の人を迎える座標
+ENTRANCE_POSE : [4.98, 0.986, 2.427]
+
+#空席を探すときの座標
+SEARCHING_POSE : [5.132, -2.007, 0.206]
+
+DRINK_LIST : ["coke","fanta","seven-up","orangina","water","milk"]
+NAME_LIST : ["Ameria", "Angel", "Ava", "Charlie", "Charlotte", "Hunter", "Max", "Mia", "Olivia", "Parker", "Sam", "Jack", "Noah", "Oliver", "Thomas", "William"]
+
+
+#ロボットが見るドアの中心位置
+LOOK_DOOR : [3.519, 2.15, 1.4]
+
+# ロボットが見るseat場所(1回目に見る順番どおりに記述)
+LOOK_ATS :
+    - sofa: (6.43, -1.76, 0.8), # ソファの中心点
+    - chair_entrance: (5.832, -0.846, 0.8), #椅子1
+    - chair_kitchen: (6.24, -4.14, 0.8) #椅子2
+
+
+
+# 人が座る位置 (右左はロボット目線)
+SPACE_POSES :
+    - SOFA_RIGHT: (6.6, -2.28, 0.0)
+    - SOFA_LEFT: (6.6, -1.45, 0.0)
+    - ENTRANCE_CHAIR: (6.72, -0.671, 0.0)
+    - KITCHEN_CHAIR: (6.24, -4.14, 0.0)
+
+
+#その席を見るには、どこを見ればよいかをリスト化
+
+
+SEAT_PERSON_DIS_THRESH : 0.5
+
+
+
+# ホスト情報（名前:HOST_NAME， 飲み物:HOST_DRINK, 場所:HOST_PLACE）
+HOST_NAME : "John"
+HOST_DRINK : "milk"
+HOST_POSE : "SOFA_LEFT"
+
+
+#ロボットが席を提案する位置姿勢
+SEAT_SUGGEST_POSES :
+    - SOFA_RIGHT: (5.777, -2.829, 0.244)
+    - SOFA_LEFT: (5.686, -1.818, 0.248)
+    - KITCHEN_CHAIR: (5.562, -3.518, -0.831)
+    - ENTRANCE_CHAIR: (5.768, -1.105, 0.595)
+
+RP_FEATURE_TRUE_CLASS : (
+        "is male","has long hair","puts on sun glasses","wears cap","wears T-shirt",
+        "wears long sleeve shirt","is in formal wear","wears short pants",
+        "wears jeans","wears long pants","wears skirt","puts on face mask", 
+        "has logo on the wear","has stripe on the wear"
+                )
+
+
+# "None"にしたら無視される
+RP_FEATURE_FALSE_CLASS : (
+        "is female","None","None","wears no cap","None",
+        "wears short sleeve shirt","None","None",
+        "None","None","None","None", 
+        "has no logo on the wear","has no stripe on the wear"   
+        )
+
+
+DEF_POSE : {"arm_lift_joint": 0.0,
+                "arm_flex_joint": numpy.deg2rad(0.0),
+                "arm_roll_joint": numpy.deg2rad(-90.0),
+                "wrist_flex_joint": numpy.deg2rad(-90.0),
+                "wrist_roll_joint": numpy.deg2rad(0.0),
+                "head_pan_joint": numpy.deg2rad(0.0),
+                "head_tilt_joint": 0.15}
+
+SEARCH_AREA_POSE : { "arm_lift_joint": 0.0,
+                        "arm_flex_joint": numpy.deg2rad(0.0),
+                        "arm_roll_joint": numpy.deg2rad(-90.0),
+                        "wrist_flex_joint": numpy.deg2rad(-90.0),
+                        "wrist_roll_joint": numpy.deg2rad(0.0),
+                        "head_pan_joint": numpy.deg2rad(0.0),
+                        "head_tilt_joint": 0.15}
+
+FREE_SPACE_POSE : {"arm_lift_joint": 0.0,
+                    "arm_flex_joint": numpy.deg2rad(0.0),
+                    "arm_roll_joint": numpy.deg2rad(-90.0),
+                    "wrist_flex_joint": numpy.deg2rad(-90.0),
+                    "wrist_roll_joint": numpy.deg2rad(0.0),
+                    "head_pan_joint": numpy.deg2rad(0.0),
+                    "head_tilt_joint": 0.15}
+
+INTRO_POSE : { "arm_lift_joint": 0.0,
+                    "arm_flex_joint": -0.55,
+                    "arm_roll_joint": numpy.deg2rad(0.0),
+                    "wrist_flex_joint": -0.8,
+                    "wrist_roll_joint": numpy.deg2rad(0.0),
+                    "head_pan_joint": numpy.deg2rad(0.0),
+                    "head_tilt_joint": 0.15}
+
+SIT_POSE :  {"arm_lift_joint": 0.30,
+                "arm_flex_joint": -0.55,
+                "arm_roll_joint": -0.10,
+                "wrist_flex_joint": -1.00,
+                "wrist_roll_joint": numpy.deg2rad(0.0),
+                "head_pan_joint": numpy.deg2rad(0.0),
+                "head_tilt_joint": 0.2}
+
+FEATURE_POSE : {"arm_lift_joint": 0.2,
+                "arm_flex_joint": numpy.deg2rad(0.0),
+                "arm_roll_joint": numpy.deg2rad(-90.0),
+                "wrist_flex_joint": numpy.deg2rad(-90.0),
+                "wrist_roll_joint": numpy.deg2rad(0.0),
+                "head_pan_joint": numpy.deg2rad(0.0),
+                "head_tilt_joint": numpy.deg2rad(20.0)}
+
+LISTEN_POSE : {"arm_lift_joint": 0.5,
+                "arm_flex_joint": numpy.deg2rad(0.0),
+                "arm_roll_joint": numpy.deg2rad(-90.0),
+                "wrist_flex_joint": numpy.deg2rad(-90.0),
+                "wrist_roll_joint": numpy.deg2rad(0.0),
+                "head_pan_joint": numpy.deg2rad(0.0),
+                "head_tilt_joint": 0.15}
+
